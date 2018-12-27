@@ -1,0 +1,27 @@
+{
+  "name": "qrcode-app",
+  "version": "1.0.0",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "build-macOS": "electron-packager ../qrcode-app QRcodeApp --platform=darwin --arch=x64 --electron-version=4.0.0",
+    "build-windows": "electron-packager ../qrcode-app QRcodeApp --platform=win32 --arch=x64 ----electron-version=4.0.0"
+  },
+  "keywords": [],
+  "author": "Katsunori Takahashi",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "request-promise": "^4.2.2",
+    "style-loader": "^0.23.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
