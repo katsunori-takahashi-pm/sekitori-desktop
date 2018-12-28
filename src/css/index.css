@@ -1,8 +1,4 @@
 @charset "UTF-8";
-html {
-  width: 100%;
-  height: 100%; }
-
 body {
   background: radial-gradient(white, rgba(0, 140, 255, 0.219));
   width: 100%;
@@ -24,6 +20,13 @@ h6 {
   z-index: 0;
   margin-top: 20px;
   margin-left: 20px; }
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 20px;
+  float: right; }
 
 .ellipses-container {
   z-index: 1;
@@ -155,10 +158,9 @@ h6 {
   margin: .4em;
   padding: 1.2em 1em 1em 1em;
   cursor: pointer;
-  background: #ffffffc5;
+  background: #ffffff;
   text-decoration: none;
   color: #09383E;
-  letter-spacing: 3px;
   z-index: 5;
   transition: opacity 1s, visibility 0s ease 1s;
   opacity: 0;
@@ -171,7 +173,33 @@ h6 {
 
 .button.show {
   transition: all 0.5s ease 0.5s;
-  background: #ffffffc5;
+  background: #ffffff;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+.press-button {
+  position: absolute;
+  color: #494949;
+  top: 33.5em;
+  right: 15.6em;
+  font-weight: 400;
+  transition: opacity 1s, visibility 0s ease 1s;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: scale(0.2);
+  transform: scale(0.2);
+  visibility: invisible; }
+
+.press-button.show {
+  transition: all 0.5s ease 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-transform-origin: center;

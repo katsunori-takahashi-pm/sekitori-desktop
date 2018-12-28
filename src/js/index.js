@@ -1,7 +1,6 @@
-setTimeout('openStart()', 3000);
+setTimeout('openStart()', 1000);
 
 function openStart() {
-  console.log(document.getElementById('button'));
-
   document.getElementById('button').classList.add('show');
+  document.getElementById('press-button').classList.add('show');
 }

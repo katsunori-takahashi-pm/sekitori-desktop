@@ -1,8 +1,4 @@
 @charset "UTF-8";
-html {
-  width: 100%;
-  height: 100%; }
-
 body {
   background: radial-gradient(white, rgba(0, 140, 255, 0.219));
   width: 100%;

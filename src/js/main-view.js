@@ -53,8 +53,8 @@ function ProcessJson() {
 }
 
 function displayErrorLog() {
-  document.getElementById('error-log').classList.add('show');
+  document.getElementById('notice').classList.add('show');
   setTimeout(function () {
-    document.getElementById('error-log').classList.remove('show');
-  }, 3000);
+    document.getElementById('notice').classList.remove('show');
+  }, 5000);
 }

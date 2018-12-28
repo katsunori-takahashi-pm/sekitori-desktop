@@ -6,11 +6,13 @@ let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1200,
-    height: 1000,
+    height: 800,
+    userContentSize: true,
+    fullscreen: true,
   });
 
   mainWindow.loadURL(`file://${__dirname}/html/index.html`)
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
