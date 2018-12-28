@@ -32,6 +32,21 @@
     color: $tiber;
     width: 200px;
     letter-spacing: 3px;
+    border-radius: 8px;
+  }
+
+  .error-log {
+    float: right;
+    text-align: center;
+    background: rgba(255, 210, 210, 0.822);
+    transition: opacity 1s, visibility 0s ease 1s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .error-log.show {
+    transition-delay: 0s;
+    opacity: 1;
+    visibility: visible;
   }
 
   @keyframes hover {
@@ -51,7 +66,7 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transform: translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    border-radius: 8px;
+
 
     &:hover {
       transform: translateY(-6px);

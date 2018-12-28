@@ -6,9 +6,10 @@
   <title>QRcode</title>
   <link rel="stylesheet" href="../css/main-view.css">
   <script type="text/javascript" src="../js/main-view.js"></script>
+  <script type="text/javascript" src="../js/sound-effect.js"></script>
 </head>
 
-<body onload="init()" onclick="focusTextbox()">
+<body onload="init()" onclick="FocusOnTextBox()">
 
   <div class="main-content">
 
@@ -16,7 +17,8 @@
       <iframe id="iframe" width="100%" height="750px" frameborder="0" hframeborder="" src="http://sekitori.pm1932.jp/sekitori/"></iframe>
     </div>
     <a rel="hover" href="./index.html" class="button hover">Exit</a>
-    <input class="main-content__input-area" type="text" value="" id="qrcode" onchange="outputJson()">
+    <div class="button error-log" id="error-log">不正な値です</div>
+    <input class="main-content__input-area" type="text" value="" id="qrcode" onchange="ProcessJson()">
   </div>
 </body>
 

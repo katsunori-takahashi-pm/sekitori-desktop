@@ -15,6 +15,7 @@
   "dependencies": {
     "css-loader": "^2.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "node-pico": "^2.1.0",
     "request-promise": "^4.2.2",
     "style-loader": "^0.23.1"
   },

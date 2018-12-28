@@ -1,22 +1,27 @@
 document.onkeydown = cancel_tab;
 
-setTimeout(function () {
-  location.reload();
-}, 60000);
 function cancel_tab(e) {
-  if(e == undefined){
-    if(event.keyCode==9){
-      event.returnValue=false;
-    return false;
-  }
+  if (e == undefined) {
+    if (event.keyCode == 9) {
+      event.returnValue = false;
+      return false;
+    }
   } else {
-    if(e.which==9){
+    if (e.which == 9) {
       return false;
     }
   }
 }
 
-function focusTextbox() {
+window.addEventListener('load', function () {
+  setInterval(doReloadTheFrame, 60000);
+});
+
+function doReloadTheFrame() {
+  document.getElementById('iframe').contentWindow.location.reload(true);
+}
+
+function FocusOnTextBox() {
   document.getElementById('qrcode').focus();
 }
 
@@ -24,7 +29,7 @@ function init() {
   document.getElementById('qrcode').focus();
 }
 
-function outputJson() {
+function ProcessJson() {
   var url = document.getElementById('qrcode').value;
   var request = require("request-promise");
   var options = {
@@ -38,9 +43,18 @@ function outputJson() {
       console.log('The acquired value is invalid');
       return
     }
+    console.log(decodeUrl);
     document.getElementById('iframe').src = decodeUrl;
   }).catch(function (err) {
+    displayErrorLog();
     console.log(err);
   });
   document.getElementById('qrcode').value = "";
+}
+
+function displayErrorLog() {
+  document.getElementById('error-log').classList.add('show');
+  setTimeout(function () {
+    document.getElementById('error-log').classList.remove('show');
+  }, 3000);
 }
